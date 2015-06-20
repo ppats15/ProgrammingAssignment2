@@ -53,7 +53,7 @@ cacheSolve <- function(x, ...) {
   ## There is no cache value of matrix inverse. Following code calculates inverse
   ## of matrix and stores it in cache for future.
   data <- x$get()
-  im <- solve(data)
+  im <- solve(data, ...)
   x$setInverse(im)
   
   ## Return a matrix that is the inverse of 'x'
